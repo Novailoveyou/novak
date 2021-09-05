@@ -1,14 +1,15 @@
-import styles from '@/components/styles/pages/Home.module.css'
+import stls from '@/styles/pages/PageHome.module.sass'
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import { IconHamburger, IconPhone, IconShoppingCart } from '@/components/icons'
 
-const Home: NextPage = () => {
+const PageHome: NextPage = () => {
   return (
-    <div className={styles.container}>
-      
+    <div className={stls.container}>
+      <IconHamburger />
+      <IconPhone />
+      <IconShoppingCart />
     </div>
   )
 }
 
-export default Home
+export default PageHome

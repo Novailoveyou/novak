@@ -2,8 +2,7 @@
 
 const { createSecureHeaders } = require('next-secure-headers')
 const withPWA = require('next-pwa')
-// const dev = process.env.NODE_ENV !== 'production'
-const { dev } = require('@/config/index')
+const dev = process.env.NODE_ENV === 'development'
 
 module.exports = withPWA({
   pwa: {
