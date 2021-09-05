@@ -1,5 +1,8 @@
+const { routes } = require('@/config/index')
+// import { routes } from '@/config/index'
+
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://test.com',
+  siteUrl: routes.front.root,
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 5000,

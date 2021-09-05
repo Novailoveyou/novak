@@ -1,9 +1,11 @@
+const { routes } = require('@/config/index')
+// import { routes } from '@/config/index'
 
 const seoconfig = {
   openGraph: {
     type: 'website',
     locale: 'ru',
-    url: 'https://test.com',
+    url: routes.front.root,
     site_name: 'Novak'
   },
   // twitter: {
@@ -12,9 +14,8 @@ const seoconfig = {
   //   cardType: 'summary_large_image',
   // },
   defaultTitle: 'Novak',
-  description:
-    'Novak',
-  canonical: 'https://test.com'
+  description: 'Novak',
+  canonical: routes.front.root
 }
 
 export default seoconfig
