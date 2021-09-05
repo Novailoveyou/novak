@@ -1,0 +1,15 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  display: flex
+  align-items: center
+
+.logo
+  margin-right: f.px(9)
+
+.title
+  font-size: f.px(23)
+  margin-bottom: 0
+  @include m.dye(c, c.$eta)
