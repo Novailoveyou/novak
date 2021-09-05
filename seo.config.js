@@ -1,3 +1,4 @@
+const { companyName } = require('@/data/company/name')
 const { routes } = require('@/config/index')
 // import { routes } from '@/config/index'
 
@@ -6,16 +7,18 @@ const seoconfig = {
     type: 'website',
     locale: 'ru',
     url: routes.front.root,
-    site_name: 'Novak'
+    site_name: companyName
   },
   // twitter: {
   //   handle: '@handle',
   //   site: '@site',
   //   cardType: 'summary_large_image',
   // },
-  defaultTitle: 'Novak',
+  defaultTitle: companyName,
   description: 'Novak',
-  canonical: routes.front.root
+  canonical: routes.front.root,
+  noindex: true,
+  nofollow: true
 }
 
 export default seoconfig
