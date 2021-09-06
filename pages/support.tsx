@@ -1,21 +1,21 @@
-import stls from '@/styles/pages/PageHome.module.sass'
+import stls from '@/styles/pages/PageSupport.module.sass'
 import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import companyName from '@/data/company/name'
 import { routes } from '@/config/index'
 
-const PageHome: NextPage = () => {
+const PageSupport: NextPage = () => {
   return (
     <>
       <NextSeo
-        title={`${companyName} | Рабочкая станция Super Novak`}
+        title={`${companyName} | Поддержка`}
         description={truncate(`Описание`, 120)}
-        canonical={routes.front.root}
+        canonical={routes.front.solutions}
       />
-      <div className={stls.container}>Home Page</div>
+      <div className={stls.container}>Поддержка</div>
     </>
   )
 }
 
-export default PageHome
+export default PageSupport

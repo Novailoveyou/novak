@@ -1,4 +1,4 @@
-import number from '@/data/contact/number'
+import { number } from '@/data/contact/number'
 
 const _offline = () => {
   return (

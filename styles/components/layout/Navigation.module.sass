@@ -1,0 +1,20 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+@use '@/styles/layout/onHover'
+
+.list
+  display: flex
+  justify-content: space-between
+  margin-top: 0
+  margin-bottom: 0
+  padding-left: 0
+
+.item
+  display: flex
+
+.link
+  font-size: f.px(16)
+  font-weight: 600
+  @include m.dye(c, rgba(c.$gamma, .7))
+  @include onHover.highlightWithBottomLine($bottom: f.px(-10))

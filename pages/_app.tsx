@@ -4,11 +4,11 @@ import Router from 'next/router'
 import Script from 'next/script'
 import { useEffect, useState, useContext } from 'react'
 import TagManager from 'react-gtm-module'
-import { DefaultSeo } from 'next-seo'
+import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from '../seo.config'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import { prod, gtmId } from '@/config/index'
+import { routes, prod, gtmId } from '@/config/index'
 import { Header, Footer } from '@/components/layout'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
@@ -42,10 +42,13 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   if (prod) {
     console.log = function () {}
   }
-
   return (
     <>
       <DefaultSeo {...SEO} />
+      <LogoJsonLd
+        logo={`${routes.front.root}/assets/images/icons/manifest-icon-512.png`}
+        url={routes.front.root}
+      />
       <Header />
       <main>
         <Component {...pageProps} />

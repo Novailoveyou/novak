@@ -3,4 +3,4 @@ const number = {
   val: '+7 (495) 648-62-26'
 }
 
-export default number
+export { number }

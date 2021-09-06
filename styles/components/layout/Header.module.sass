@@ -3,4 +3,20 @@
 @use '@/styles/themes/default/colors' as c
 
 .container
+  padding-top: f.px(24)
+  padding-bottom: f.px(24)
   @include m.dye(bg, c.$delta)
+
+.wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.left
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 68%
+
+.navigation
+  width: 72%
