@@ -15,9 +15,10 @@ const Header = ({ classNames = [] }: HeaderType) => {
     <header className={classnames([stls.container], container)}>
       <Wrapper classNames={[stls.wrapper]}>
         <div className={stls.left}>
-          <Logo />
+          <Logo classNames={[stls.logo]} />
           <Navigation classNames={[stls.navigation]} />
         </div>
+        <div className={stls.right}></div>
       </Wrapper>
     </header>
   )

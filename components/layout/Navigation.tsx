@@ -16,7 +16,7 @@ const Navigation = ({ classNames = [] }: NavigationType) => {
     },
     {
       href: routes.front.about,
-      val: 'О компании'
+      val: 'О Компании'
     },
     {
       href: routes.front.products,

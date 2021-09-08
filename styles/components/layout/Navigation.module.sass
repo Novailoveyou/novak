@@ -12,9 +12,10 @@
 
 .item
   display: flex
+  @include m.gap($mr: f.px(10))
 
 .link
   font-size: f.px(16)
-  font-weight: 600
+  font-weight: 400
   @include m.dye(c, rgba(c.$gamma, .7))
   @include onHover.highlightWithBottomLine($bottom: f.px(-10))
