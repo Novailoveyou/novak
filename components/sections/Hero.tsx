@@ -4,8 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 import classnames from 'classnames'
 import { getClassNames } from '@/helpers/index'
 import { Wrapper } from '@/components/layout'
-
-import CarouselItemHero from '../carousel/CarouselItemHero'
+import CarouselItemHero from '@/components/carousel/CarouselItemHero'
 
 type HeaderType = {
   classNames?: string[]
@@ -25,10 +24,10 @@ const Header = ({ classNames = [] }: HeaderType) => {
           {/* autoPlay interval={3000}  */}
           <CarouselItemHero />
           <div className={stls.item}>
-            <p>2</p>
+            <p>Здесь будет 2ая страница карусели</p>
           </div>
           <div className={stls.item}>
-            <p>3</p>
+            <p>Здесь будет 3ая страница карусели</p>
           </div>
         </Carousel>
       </Wrapper>

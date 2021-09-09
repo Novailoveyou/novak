@@ -5,3 +5,54 @@
 .container
   @include m.dye(bg, c.$epsilon)
   @include m.dye(c, c.$omega)
+  padding-top: f.px(282)
+  padding-bottom: f.px(70)
+
+.wrapper
+  padding-left: f.px(110)
+  padding-right: f.px(110)
+
+.top
+  display: flex
+  justify-content: space-between
+  padding-bottom: f.px(116)
+
+.left
+  flex-basis: 50%
+
+.number
+  margin-bottom: f.px(9)
+  font-size: f.px(45)
+  font-weight: 600
+  line-height: 110%
+  @include m.dye(c, c.$omega)
+
+.address
+  margin-bottom: f.px(24)
+  @include m.dye(c, rgba(c.$omega, .5))
+
+.email
+  font-size: f.px(20)
+  font-weight: 600
+  @include m.dye(c, c.$alpha)
+
+.right
+  flex-basis: 50%
+
+.navigation
+  & ul
+    flex-wrap: wrap
+  & li
+    flex-basis: 45%
+    margin-bottom: f.px(34)
+    &:nth-child(3n)
+      margin-bottom: 0
+  & a
+    font-size: f.px(20)
+    @include m.dye(c, c.$omega)
+
+.copy
+  margin-bottom: 0
+  font-size: f.px(13)
+  line-height: 120%
+  @include m.dye(c, c.$kappa)

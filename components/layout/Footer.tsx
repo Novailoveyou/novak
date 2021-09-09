@@ -17,7 +17,7 @@ const Footer = ({ classNames = [] }: FooterType) => {
 
   return (
     <footer className={classnames([stls.container], container)}>
-      <Wrapper>
+      <Wrapper classNames={[stls.wrapper]}>
         <div className={stls.top}>
           <div className={stls.left}>
             <a href={number.href} className={stls.number}>
@@ -26,14 +26,16 @@ const Footer = ({ classNames = [] }: FooterType) => {
             <p className={stls.address}>
               {city}, {street}, {zip}
             </p>
-            <a href={email.href}>{email.val}</a>
+            <a href={email.href} className={stls.email}>
+              {email.val}
+            </a>
           </div>
           <div className={stls.right}>
-            <Navigation />
+            <Navigation classNames={[stls.navigation]} />
           </div>
         </div>
         <div className={stls.bottom}>
-          {companyName} &copy; Все права защищены
+          <p className={stls.copy}>{companyName} &copy; Все права защищены</p>
         </div>
       </Wrapper>
     </footer>
