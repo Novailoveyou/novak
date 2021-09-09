@@ -3,6 +3,7 @@ import classnames from 'classnames'
 import { getClassNames } from '@/helpers/index'
 import { Logo } from '@/components/general'
 import { Navigation, Wrapper } from '@/components/layout'
+import { BtnNumber, BtnShoppingCart } from '@/components/btns'
 
 type HeaderType = {
   classNames?: string[]
@@ -18,7 +19,10 @@ const Header = ({ classNames = [] }: HeaderType) => {
           <Logo classNames={[stls.logo]} />
           <Navigation classNames={[stls.navigation]} />
         </div>
-        <div className={stls.right}></div>
+        <div className={stls.right}>
+          <BtnNumber classNames={[stls.number]} />
+          <BtnShoppingCart />
+        </div>
       </Wrapper>
     </header>
   )

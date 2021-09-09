@@ -3,7 +3,7 @@ import Link from 'next/link'
 import classnames from 'classnames'
 import { getClassNames } from '@/helpers/index'
 import { routes } from '@/config/index'
-import { ImgLogo } from '@/components/images'
+import { IconLogo } from '@/components/icons'
 
 type LogoType = {
   classNames?: string[]
@@ -15,7 +15,7 @@ const Logo = ({ classNames = [] }: LogoType) => {
   return (
     <Link href={routes.front.home}>
       <a className={classnames([stls.container], container)}>
-        <ImgLogo classNames={[stls.logo]} />
+        <IconLogo classNames={[stls.logo]} />
         <p className={stls.title}>Novak</p>
       </a>
     </Link>
