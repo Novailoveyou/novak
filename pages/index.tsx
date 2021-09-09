@@ -4,6 +4,7 @@ import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import companyName from '@/data/company/name'
 import { routes } from '@/config/index'
+import { Hero } from '@/components/sections'
 
 const PageHome: NextPage = () => {
   return (
@@ -13,7 +14,9 @@ const PageHome: NextPage = () => {
         description={truncate(`Описание`, 120)}
         canonical={routes.front.root}
       />
-      <div className={stls.container}>Home Page</div>
+      <div className={stls.container}>
+        <Hero />
+      </div>
     </>
   )
 }

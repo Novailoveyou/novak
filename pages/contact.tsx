@@ -14,7 +14,7 @@ const PageContact: NextPage = () => {
       <NextSeo
         title={`${companyName} | Контакты`}
         description={truncate(
-          `Техподежка: ${number.val}, Адрес: ${city}, ${street}, Отдел продаж: ${email}`,
+          `Техподежка: ${number.val}, Адрес: ${city}, ${street}, Отдел продаж: ${email.val}`,
           120
         )}
         canonical={routes.front.root + routes.front.contact}
