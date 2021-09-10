@@ -16,7 +16,8 @@ const routes = {
   back: {
     root: dev ? process.env.DEV_ROOT_BACK_URL : process.env.PROD_ROOT_BACK_URL,
     // root: dev ? 'http://localhost:1337' : 'https://test.com',
-    home: '/'
+    home: '/',
+    categories: '/categories'
   }
 }
 

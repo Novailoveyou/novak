@@ -4,6 +4,7 @@ import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import companyName from '@/data/company/name'
 import { routes } from '@/config/index'
+import { Wrapper } from '@/components/layout'
 
 const PageAbout: NextPage = () => {
   return (
@@ -16,7 +17,9 @@ const PageAbout: NextPage = () => {
         )}
         canonical={routes.front.root + routes.front.about}
       />
-      <div className={stls.container}>О компании</div>
+      <div className={stls.container}>
+        <Wrapper>Здесь будет страница О компании</Wrapper>
+      </div>
     </>
   )
 }

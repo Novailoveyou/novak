@@ -1,13 +1,16 @@
 import { number } from '@/data/contact/number'
+import { Wrapper } from '@/components/layout'
 
 const _offline = () => {
   return (
     <div>
-      <p>
-        Подключение к сети отсутствует. Пожалуйста, попробуйте позже или
-        позвоните нам по номеру
-        <a href={number.href}>{number.val}</a>
-      </p>
+      <Wrapper>
+        <p>
+          Подключение к сети отсутствует. Пожалуйста, попробуйте позже или
+          позвоните нам по номеру
+          <a href={number.href}>{number.val}</a>
+        </p>
+      </Wrapper>
     </div>
   )
 }

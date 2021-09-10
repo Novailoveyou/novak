@@ -1,0 +1,10 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.title
+  margin-bottom: f.px(34)
+  font-size: f.px(64)
+  font-weight: 600
+  line-height: 110%
+  @include m.dye(c, c.$gamma)

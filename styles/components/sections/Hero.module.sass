@@ -5,7 +5,10 @@
 .container
   position: relative
   padding-top: f.px(33)
+  margin-bottom: f.px(129)
   @include m.dye(bg, c.$delta)
+  border-bottom-left-radius: f.px(50)
+  border-bottom-right-radius: f.px(50)
 
 .wrapper
   overflow: visible
@@ -15,20 +18,53 @@
     overflow: visible !important
     & > div
       overflow: visible
-    & button:nth-last-child(1)
-      top: auto !important
-      left: f.px(60)
-      bottom: 0 !important
-      height: f.px(40)
-      width: f.px(40)
-      background-color: #333 !important
+    // pagination
+    & > *:nth-child(1)
+      position: absolute      
+      bottom: 0
+      left: f.px(140)
+      text-align: left
+      & > *
+        width: f.px(50) !important
+        height: f.px(1) !important
+        padding: f.px(5) 0
+        border-bottom: f.px(1) solid
+        @include m.dye(border, c.$psi)
+        border-radius: 0 !important
+        box-shadow: none !important
+        background-color: transparent !important
+    // Arrow slides
+    & button:nth-last-child(1),
     & button:nth-last-child(3)
+      position: absolute
       top: auto !important
-      left: 0
       bottom: 0 !important
+      display: flex
+      justify-content: center
+      align-items: center
       height: f.px(40)
       width: f.px(40)
-      background-color: #333 !important
+      border: f.px(2) solid rgba(c.$psi, .1)
+      border-radius: f.px(40)
+      &:hover
+        @include m.dye(bg, c.$omega)
+      &::before
+        content: ''
+        padding: f.px(2)
+        border: solid
+        border-width: 0 f.px(2) f.px(2) 0
+        @include m.dye(border, c.$psi)
+    // Arrow slide right
+    & button:nth-last-child(1)
+      left: f.px(55)
+      &::before
+        transform: rotate(-45deg)
+    // Arrow slide left
+    & button:nth-last-child(3)
+      left: 0
+      &::before
+        transform: rotate(135deg)
+
 
 // .slider-wrapper.axis-horizontal
 //   overflow: visible

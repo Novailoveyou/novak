@@ -6,11 +6,11 @@ import { getClassNames } from '@/helpers/index'
 import { Wrapper } from '@/components/layout'
 import CarouselItemHero from '@/components/carousel/CarouselItemHero'
 
-type HeaderType = {
+type HeroType = {
   classNames?: string[]
 }
 
-const Header = ({ classNames = [] }: HeaderType) => {
+const Hero = ({ classNames = [] }: HeroType) => {
   const container = getClassNames({ classNames })
 
   return (
@@ -35,4 +35,4 @@ const Header = ({ classNames = [] }: HeaderType) => {
   )
 }
 
-export default Header
+export default Hero

@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import companyName from '@/data/company/name'
 import { routes } from '@/config/index'
-import { Hero } from '@/components/sections'
+import { Hero, Products } from '@/components/sections'
 
 const PageHome: NextPage = () => {
   return (
@@ -16,6 +16,7 @@ const PageHome: NextPage = () => {
       />
       <div className={stls.container}>
         <Hero />
+        <Products />
       </div>
     </>
   )

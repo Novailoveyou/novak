@@ -7,6 +7,7 @@ import { routes } from '@/config/index'
 import { number } from '@/data/contact/number'
 import { email } from '@/data/contact/email'
 import { city, street } from '@/data/contact/location'
+import { Wrapper } from '@/components/layout'
 
 const PageContact: NextPage = () => {
   return (
@@ -19,7 +20,9 @@ const PageContact: NextPage = () => {
         )}
         canonical={routes.front.root + routes.front.contact}
       />
-      <div className={stls.container}>Контакты</div>
+      <div className={stls.container}>
+        <Wrapper>Здесь будет страница Контакты</Wrapper>
+      </div>
     </>
   )
 }
