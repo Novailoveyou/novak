@@ -4,18 +4,26 @@ import { getClassNames } from '@/helpers/index'
 
 type IconRectangleType = {
   classNames?: string[]
-  fill?: 'alpha'
+  fill?: 'alpha' | 'epsilon'
+  opacity?: '1' | 'o01'
 }
 
 const IconRectangle = ({
   classNames = [],
-  fill = 'alpha'
+  fill = 'alpha',
+  opacity = '1'
 }: IconRectangleType) => {
   const container = getClassNames({ classNames })
 
   // fills here are used as fallbacks for older browsers
   return (
-    <div className={classnames([stls.container], [stls[fill]], container)}>
+    <div
+      className={classnames(
+        [stls.container],
+        [stls[fill]],
+        [stls[opacity]],
+        container
+      )}>
       <svg viewBox='0 0 684 684' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <rect
           y='144.476'

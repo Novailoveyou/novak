@@ -5,12 +5,18 @@
 .container
   @include m.dye(bg, c.$epsilon)
   @include m.dye(c, c.$omega)
-  padding-top: f.px(282)
   padding-bottom: f.px(70)
 
 .wrapper
+  margin-top: f.px(75)
   padding-left: f.px(110)
   padding-right: f.px(110)
+
+.form
+  position: relative
+  z-index: 1
+  margin-top: f.px(-250)
+  margin-bottom: f.px(89)
 
 .top
   display: flex
